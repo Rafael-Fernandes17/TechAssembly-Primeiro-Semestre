@@ -1,0 +1,218 @@
+:root {
+  --cor-laranja-principal: #f06f1e;
+  --cor-laranja-claro: #ff884d;
+  --cor-laranja-hover: #e06512;
+  --cor-laranja-escuro: #e65c00;
+  --cor-fundo-escuro: #0c0c0c;
+  --cor-fundo-campo: #222;
+  --cor-branco: #ffffff;
+  --cor-cinza-claro: #ccc;
+  --cor-sombra: rgba(0, 0, 0, 0.3);
+  --cor-sombra-profunda: rgba(0, 0, 0, 0.5);
+  --texto-claro: #ffffff;
+  --texto-escuro: #000000;
+  --fonte-principal: "Bebas Neue", sans-serif;
+  --fonte-secundaria: sans-serif;
+  --raio-borda: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo-escuro);
+  color: var(--texto-claro);
+}
+
+/* Organizando o cabeçalho */
+.cabeçalho {
+    background-color: var(--cor-laranja-principal);
+    padding: 0.5%;
+    height: 20%;
+    max-height: 150px;
+    text-align: center;
+}
+
+/* estilizando o título da  */
+.logo{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.8em;
+    margin: 0;
+    width: 100%;
+    margin-top: 1%;
+    color: var(--texto-claro);
+}
+
+/* O menu são os botões de navegação entre páginas */
+.menu{
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+.menu a{
+    background-color: var(--cor-laranja-claro);
+    color: var(--texto-claro);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 11%;
+    max-width: 170px;
+    height: 5%;
+    font-size: 1.5em;
+}
+
+.menu a:hover {
+  background-color: var(--cor-laranja-hover);
+}
+
+.menu a.ativo {
+  background-color: var(--cor-laranja-hover);
+}
+
+
+.info-pagina {
+  display: flex;
+  justify-content: center;
+}
+
+.container-populares {
+  background-color: var(--cor-laranja-principal);
+  margin: 1em;
+  padding: 8px 16px;
+  color: var(--texto-claro);
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: var(--fonte-principal);
+}
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto {
+  width: 300px;
+  background-color: var(--cor-branco);
+  color: var(--texto-escuro);
+  border-radius: var(--raio-borda);
+  padding: 12px;
+  box-shadow: var(--cor-sombra);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.conteudo-produto {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.produto img {
+  width: 80px;
+  height: 4em;
+  border-radius: 8px;
+}
+
+.descricao p {
+  font-family: var(--fonte-secundaria);
+  font-size: 1em;
+  margin: 0;
+  color: var(--texto-escuro);
+}
+
+.add {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--cor-laranja-principal);
+  color: var(--texto-claro);
+  font-size: 20px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popular {
+  background-color: var(--cor-laranja-principal);
+  color: #000000;
+  border-radius: 0 0 var(--raio-borda) var(--raio-borda);
+  text-align: center;
+  padding: 6px 0;
+  font-weight: normal;
+  font-family: var(--fonte-principal);
+  font-size: 1.1em;
+  margin-top: auto;
+}
+
+.depoimentos {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: var(--texto-claro);
+  font-family: var(--fonte-secundaria);
+}
+
+.depoimentos h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: var(--fonte-principal);
+  font-size: 2.4rem;
+  color: var(--cor-laranja-principal);
+}
+
+.depoimento {
+  background-color: var(--cor-fundo-campo);
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: var(--cor-sombra-profunda);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--texto-claro);
+}
+
+.depoimento span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--cor-laranja-claro);
+  font-size: 1rem;
+  text-align: right;
+}
+
+.container-login {
+    position: absolute; /* Posicionamento absoluto em relação à página */
+    top: 200px;  /* Ajuste este valor com base na altura do seu cabeçalho */
+    right: 20px; /* Distância da direita */
+    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+}
+
+/* Estilo do botão de login */
+.login-button {
+    background-color: var(--cor-laranja-principal); /* Azul, para diferenciar do menu */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif; /* Usando a mesma fonte do seu site */
+    font-size: 1.2em; /* Tamanho da fonte */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra suave */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.login-button:hover {
+    background-color: var(--cor-laranja-hover); /* Cor mais escura ao passar o mouse */
+}

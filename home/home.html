@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home TechAssembly</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="reset.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="cabeçalho">
+            <h1 class="logo">TechAssembly</h1>
+                <nav class="menu">
+                    <a href="../home/home.html" class="lista__link ativo">Home</a>
+                    <a href="../informações/index.html" class="lista__link">Informações</a>
+                    <a href="../Recomendados/recomendado.html" class="lista__link">Recomendados</a>
+                    <a href="../montar/index.html" class="lista__link">Montar</a>
+                    <a href="../populares/index.html" class="lista__link">Populares</a>
+                    <a href="../noticias/noticias.html" class="lista__link">Notícias</a>
+                    <a href="../teste de desempenho/teste.html" class="lista__link">Teste de desempenho</a>
+                </nav>
+        </header>
+
+        <div class="container-login">
+            <a href="../login/login.html" class="login-button">Login</a>
+        </div>
+
+        <section class="pesquisa-container">
+            <input type="text" class="campo-pesquisa" placeholder="🔍 DIGITE AQUI O QUE VOCÊ PROCURA">
+            <div id="filtros">
+                <label for="categoria">Categoria:</label>
+                <select id="categoria">
+                    <option value="Todos">Todos</option>
+                    <option value="Placa Mãe">Placa Mãe</option>
+                    <option value="Placa de Vídeo">Placa de Vídeo</option>
+                    <option value="Monitores">Monitores</option>
+                </select>
+
+
+                <button id="aplicarFiltros">Aplicar Filtros</button>
+            </div>
+
+<div id="listaProdutos">
+    </div>
+        </section>
+
+        <main class="produtos">
+            <a href = "../home/monitor/monitorProfissional.html">
+                <div class="produto">
+                    <img src="../home/img/Monitor gamer.jpg" alt="Produto 1">
+                    <div class="descricao">
+                        <p>Monitor Profissional LG 27" UHD 4K</p>
+                    </div>
+                    <span class="add">+</span>
+                </div>
+             </a>
+            <a href = "../home/placaVideo/placaVideo.html">
+                <div class="produto">
+                    <img src="../home/img/Placa de video.jpg" alt="Produto 2">
+                    <div class="descricao">
+                        <p>Placa de Vídeo RTX 4060 Infinity 2</p>
+                    </div>
+                    <span class="add">+</span>
+                </div>
+            </a>
+            
+            <a href = "../home/memoriaRam/memoriaRam.html">
+                <div class="produto">
+                    <img src="../home/img/Memória ram.jpeg" alt="Produto 3">
+                    <div class="descricao">
+                        <p>Memória RAM Kingston Fury 8GB, 3200MHz</p>
+                    </div>
+                    <span class="add">+</span>
+                </div>
+            </a>
+
+            <a href = "../home/cpu/ryzen.html">
+                <div class="produto">
+                    <img src="../home/img/cpu.jpg" alt="Produto 4">
+                    <div class="descricao">
+                        <p>Ryzen 7 5800x3d</p>
+                    </div>
+                    <span class="add">+</span>
+                </div>
+              </a>
+        </main>
+
+        <section>
+            
+        </section>
+    </body>
+</html>

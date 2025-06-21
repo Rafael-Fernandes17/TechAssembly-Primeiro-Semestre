@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="login.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <title>Login TechAssembly</title>
+  </head>
+  <body>
+    <main>
+      <img src="../login/img/logo.png" class="logo" />
+      <div class="login-box">
+        <h2>Login</h2>
+        <!-- Botao de login google -->
+        <button type="button" class="social-login-button google-button">
+          <i class="bx bxl-google"></i> Entrar com Google
+        </button>
+        <!-- Botao de login Git -->
+        <button type="button" class="social-login-button github-button">
+          <i class="bx bxl-github"></i> Entrar com GitHub
+        </button>
+        <!-- Divisor  -->
+        <div class="divisor">
+          <hr />
+          <span>OU</span>
+          <hr />
+        </div>
+        <form action="../home/home.html">
+          <!-- Caixa do email "required serve pra ser obrigatorio"-->
+          <input type="email" placeholder="E-mail" required />
+          <!-- Caixa de senha -->
+          <input type="password" placeholder="Senha" required />
+          <!-- Div para Lembrar senha e esqueci senha -->
+          <div class="lembrar-esqueci">
+            <label>
+              <input type="checkbox" />
+              Lembra senha
+            </label>
+            <a class="senha" href="#">Esqueci a senha</a>
+          </div>
+          <input type="submit" value="Entrar" />
+        </form>
+        <a class="conta" href="../cadastro/cadastro.html">Ainda não possui cadastro ?</a>
+      </div>
+    </main>
+  </body> 
+</html> 

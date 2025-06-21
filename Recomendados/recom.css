@@ -1,0 +1,225 @@
+:root {
+  --cor-laranja-principal: #f06f1e;
+  --cor-laranja-claro: #ff884d;
+  --cor-laranja-hover: #e06512;
+  --cor-laranja-escuro: #e65c00;
+  --cor-fundo-escuro: #0c0c0c;
+  --cor-fundo-campo: #222;
+  --cor-branco: #ffffff;
+  --cor-cinza-claro: #ccc;
+  --cor-sombra: rgba(0, 0, 0, 0.3);
+  --cor-sombra-profunda: rgba(0, 0, 0, 0.5);
+  --texto-claro: #ffffff;
+  --texto-escuro: #000000;
+  --fonte-principal: "Bebas Neue", sans-serif;
+  --fonte-secundaria: sans-serif;
+  --raio-borda: 12px;
+}
+
+* {
+    font-family: var(--fonte-principal) !important;
+}
+/* Apenas definindo para o html ocupar a tela inteira */
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #0c0c0c;
+   
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+/* Organizando o cabeçalho */
+.cabeçalho {
+    background-color: var(--cor-laranja-principal);
+    padding: 0.5%;
+    height: 20%;
+    max-height: 150px;
+    text-align: center;
+}
+
+/* estilizando o título da  */
+.logo{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.8em;
+    margin: 0;
+    width: 100%;
+    margin-top: 1%;
+    color: var(--texto-claro);
+}
+
+/* O menu são os botões de navegação entre páginas */
+.menu{
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+.menu a{
+    background-color: var(--cor-laranja-claro);
+    color: var(--texto-claro);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 11%;
+    max-width: 170px;
+    height: 5%;
+    font-size: 1.5em;
+}
+
+.menu a:hover {
+  background-color: var(--cor-laranja-hover);
+}
+
+.menu a.ativo{
+    background-color: var(--cor-laranja-hover);
+}   
+
+.menu a:hover {
+  background-color: var(--cor-laranja-hover);
+}
+
+/* ... seu CSS existente acima ... */
+
+.banner-recomendacao {
+    display: flex;
+    justify-content: center;
+}
+.banner {
+    background-color: var(--cor-laranja-principal);
+    margin: 1em;
+    padding: 8px 16px;
+    color: var(--texto-claro);
+    border-radius: 20px;
+    font-size: 1.8em;
+    text-align: center; /* Garante o alinhamento em telas menores */
+}
+
+/* --- NOVO CSS PARA A LISTA DE COMPONENTES --- */
+
+.recomendacoes-container {
+    max-width: 80%;
+    margin: 1em auto; /* Centraliza o container */
+    padding: 0 15px;
+}
+
+.componente {
+    background-color: var(--cor-fundo-campo);
+    border: 1px solid var(--cor-laranja-escuro);
+    border-radius: var(--raio-borda);
+    margin-bottom: 1em;
+    overflow: hidden; /* Importante para a animação da altura */
+}
+
+.componente-header {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 18px 25px;
+    text-align: left;
+    color: var(--texto-claro);
+    cursor: pointer;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estiliza um ícone de "+" para indicar que pode ser aberto */
+.componente-header::after {
+    content: '+';
+    font-size: 2em;
+    color: var(--cor-laranja-principal);
+    transition: transform 0.3s ease;
+}
+
+/* Gira o ícone para "-" quando o item está ativo */
+.componente.ativo .componente-header::after {
+    transform: rotate(45deg);
+}
+
+
+.componente-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    padding: 0 25px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as opções */
+}
+
+/* Classe 'ativo' que será adicionada via JavaScript */
+.componente.ativo .componente-body {
+    max-height: 400px; /* Aumente a altura para caber mais itens */
+    padding: 20px 25px;
+}
+
+/* NOVO: Estilo para cada item individual dentro do body */
+.opcao-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* NOVO: Adiciona uma linha separadora entre as opções para clareza */
+.opcao-item + .opcao-item {
+    border-top: 1px solid #333; /* Linha sutil */
+    padding-top: 20px; /* Espaço acima da linha */
+}
+
+.componente-img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.componente-info a {
+    font-size: 1.5em;
+    color: var(--cor-laranja-claro);
+    margin: 0 0 5px 0;
+    text-decoration: none;
+}
+
+.componente-info p {
+    font-family: var(--fonte-secundaria) !important; /* Usando a fonte secundária para descrição */
+    font-size: 1em;
+    color: var(--cor-cinza-claro);
+    margin: 0;
+}
+
+.container-login {
+    position: absolute; /* Posicionamento absoluto em relação à página */
+    top: 200px;  /* Ajuste este valor com base na altura do seu cabeçalho */
+    right: 20px; /* Distância da direita */
+    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+}
+
+/* Estilo do botão de login */
+.login-button {
+    background-color: var(--cor-laranja-principal); /* Azul, para diferenciar do menu */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif; /* Usando a mesma fonte do seu site */
+    font-size: 1.2em; /* Tamanho da fonte */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra suave */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.login-button:hover {
+    background-color: var(--cor-laranja-hover); /* Cor mais escura ao passar o mouse */
+}

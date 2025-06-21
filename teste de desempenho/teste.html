@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste TechAssembly </title>
+        <link rel="stylesheet" href="reset.css"> <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    </head>
+
+    <header class="cabeçalho">
+        <h1 class="logo">TechAssembly</h1>
+            <nav class="menu">
+                <a href="../home/home.html" class="lista__link">Home</a>
+                <a href="../informações/index.html" class="lista__link">Informações</a>
+                <a href="../Recomendados/recomendado.html" class="lista__link">Recomendados</a>
+                <a href="../montar/index.html" class="lista__link">Montar</a>
+                <a href="../populares/index.html" class="lista__link">Populares</a>
+                <a href="../noticias/noticias.html" class="lista__link">Notícias</a>
+                <a href="../teste de desempenho/teste.html" class="lista__link ativo">Teste de desempenho</a>
+            </nav>
+    </header>
+
+        <div class="container-login">
+            <a href="../login/login.html" class="login-button">Login</a>
+        </div>
+
+        <main class="conteudo-principal">
+    <section class="secao-teste-desempenho">
+        <h2 class="titulo-secao">Teste de Desempenho de Componentes</h2>
+        <p class="descricao-secao">Selecione os componentes para ver uma estimativa de desempenho e compatibilidade.</p>
+
+        <div class="container-selecao">
+            <div class="caixa-selecao">
+                <label for="processador">Processador:</label>
+                <select id="processador" class="dropdown-componente"></select>
+            </div>
+
+            <div class="caixa-selecao">
+                <label for="placaMae">Placa Mãe:</label>
+                <select id="placaMae" class="dropdown-componente"></select>
+            </div>
+
+            <div class="caixa-selecao">
+                <label for="memoriaRam">Memória RAM:</label>
+                <select id="memoriaRam" class="dropdown-componente"></select>
+            </div>
+
+            <div class="caixa-selecao">
+                <label for="placaVideo">Placa de Vídeo:</label>
+                <select id="placaVideo" class="dropdown-componente"></select>
+            </div>
+
+            <div class="caixa-selecao">
+                <label for="fonte">Fonte (PSU):</label>
+                <select id="fonte" class="dropdown-componente"></select>
+            </div>
+        </div>
+
+        <button id="btnComparar" class="botao-principal">Comparar Desempenho</button>
+
+        <div id="resultados" class="container-resultados">
+            </div>
+    </section>
+</main>
+
+<script src="script.js"></script>

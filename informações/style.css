@@ -1,0 +1,158 @@
+:root {
+  --cor-laranja-principal: #f06f1e;
+  --cor-laranja-claro: #ff884d;
+  --cor-laranja-hover: #e06512;
+  --cor-laranja-escuro: #e65c00;
+  --cor-fundo-escuro: #0c0c0c;
+  --cor-fundo-campo: #222;
+  --cor-branco: #ffffff;
+  --cor-cinza-claro: #ccc;
+  --cor-sombra: rgba(0, 0, 0, 0.3);
+  --cor-sombra-profunda: rgba(0, 0, 0, 0.5);
+  --texto-claro: #ffffff;
+  --texto-escuro: #000000;
+  --fonte-principal: "Bebas Neue", sans-serif;
+  --fonte-secundaria: sans-serif;
+  --raio-borda: 12px;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo-escuro);
+    color: var(--texto-claro);
+}
+.cabeçalho {
+    background-color: var(--cor-laranja-principal);
+    padding: 0.5%;
+    height: 20%;
+    max-height: 150px;
+    text-align: center;
+}
+
+/* estilizando o título da  */
+.logo{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.8em;
+    margin: 0;
+    width: 100%;
+    margin-top: 1%;
+    color: var(--texto-claro);
+}
+
+/* O menu são os botões de navegação entre páginas */
+.menu{
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+.menu a{
+    background-color: var(--cor-laranja-claro);
+    color: var(--texto-claro);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 11%;
+    max-width: 170px;
+    height: 5%;
+    font-size: 1.5em;
+}
+
+.menu a:hover {
+  background-color: var(--cor-laranja-hover);
+}
+
+.menu a.ativo{
+    background-color: var(--cor-laranja-hover);
+}   
+
+.info-pagina{
+    display: flex;
+    justify-content: center;
+}
+
+.container-info-texto{
+    background-color: var(--cor-laranja-principal);
+    margin: 1em;
+    padding: 8px 16px;
+    color: var(--texto-claro);
+    border-radius: 20px;
+    font-size: 30px;
+    font-family: var(--fonte-principal);
+}
+
+.container-explicacao{
+    text-align: left;
+}
+
+.info-basicas{
+    font-family: var(--fonte-principal);
+    font-size: 35px;
+    margin: 0 0 0.5em 0;
+    text-align: center;
+}
+
+.info-basicas-computador{
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+}
+
+.p-computador{
+    font-family: var(--fonte-secundaria);
+    font-size: 15px;
+    margin: 1em 0 3em 0;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+    word-break: normal;
+    hyphens: auto;
+}
+
+.principal{
+    text-align: left;
+    margin: 1em 15em 5em 15em;
+}
+
+.imagem-basica{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.info-basicas-computador-chipset{
+    margin-top: 1em;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+}
+
+.container-login {
+    position: absolute; /* Posicionamento absoluto em relação à página */
+    top: 200px;  /* Ajuste este valor com base na altura do seu cabeçalho */
+    right: 20px; /* Distância da direita */
+    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+}
+
+/* Estilo do botão de login */
+.login-button {
+    background-color: var(--cor-laranja-principal); /* Azul, para diferenciar do menu */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif; /* Usando a mesma fonte do seu site */
+    font-size: 1.2em; /* Tamanho da fonte */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Sombra suave */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.login-button:hover {
+    background-color: var(--cor-laranja-hover); /* Cor mais escura ao passar o mouse */
+}

@@ -1,0 +1,214 @@
+* {
+  font-family: "Bebas Neue", sans-serif !important;
+}
+
+/* Estiliza a imagem com a classe "logo" */
+.logo {
+  position: fixed;
+  top: 3%;
+  left: 2%;
+  width: 8%;
+  height: auto;
+}
+
+/* Estiliza o elemento <body>, que é o corpo principal da página. */
+body {
+  background-color: #111111;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Garante que main ocupe toda a altura do body para centralizar .login-box */
+}
+
+/* Estiliza a div com a classe "login-box" (a caixa de login). */
+.login-box {
+  background-color: #333333;
+  color: white;
+  width: 25%;
+  padding: 2em; /* Use em ou rem para padding, ou px. Ex: 2em = 2 vezes o font-size do elemento pai */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(240, 111, 30, 0.2);
+  display: grid;
+  gap: 1.25rem; /* Usar rem (20px se a base for 16px) para espaçamento consistente */
+  /* Ajuste max-width para evitar que a caixa fique muito larga em telas grandes */
+  max-width: 450px;
+  /* Adicione min-width para evitar que fique muito apertado em telas pequenas */
+  min-width: 300px; /* Ou um valor que garanta a legibilidade */
+}
+
+/* Estiliza o elemento <form> dentro da .login-box. */
+form {
+  display: grid;
+  gap: 1rem; /* Use rem ou px para um espaçamento mais previsível (16px se a base for 16px) */
+}
+
+/* Estiliza os elementos <h2> (o título "Login"). */
+h2 {
+  font-size: 2.2rem; /* Use rem para controlar o tamanho do título em relação ao base */
+  text-align: center;
+}
+
+/* Estiliza todos os elementos <input> (campos de e-mail, senha, checkbox, botão de submit). */
+input {
+  padding: 0.8em; /* Use em ou rem para padding, ou px. Ex: 0.8em = 0.8 vezes o font-size do input */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem; /* Garante que o input tenha um tamanho base de fonte (ex: 16px) */
+}
+
+/* Estiliza um campo <input> quando ele está em foco (selecionado/clicado). */
+input:focus {
+  border-color: rgb(240, 111, 30);
+}
+
+/* Estiliza especificamente o campo <input> do tipo "submit" (o botão "Entrar"). */
+input[type="submit"] {
+  background-color: rgb(240, 111, 30);
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem; /* Use rem para um tamanho de fonte responsivo e previsível */
+  border: none;
+  /* REMOVIDO: height: 100%; width: 100%; - Essas propriedades fazem o botão tentar preencher o pai de forma indesejada */
+  padding: 0.8em 1.5em; /* Adicione padding específico se precisar de mais espaço, ou deixe herdar do input geral */
+}
+
+/* Estiliza a div com a classe "lembrar-esqueci". */
+.lembrar-esqueci {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em; /* Use em ou rem */
+  align-items: center; /* Adicionado para alinhar verticalmente os itens internos */
+}
+
+/* Estiliza o <input> dentro do <label> que está dentro de .lembrar-esqueci (o checkbox). */
+.lembrar-esqueci label input {
+  accent-color: rgb(240, 111, 30);
+  margin-right: 0.5em; /* Use em ou rem */
+}
+
+/* Estiliza o link <a> com a classe "senha" dentro de .lembrar-esqueci. */
+.lembrar-esqueci .senha {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estiliza o link "Esqueci a senha" quando o mouse passa por cima (hover). */
+.lembrar-esqueci .senha:hover {
+  text-decoration: underline;
+}
+
+/* Estiliza o botão de submit quando o mouse passa por cima. */
+input[type="submit"]:hover {
+  /* REMOVIDO: height: 100%; width: 100%; */
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Estiliza o link <a> com a classe "conta" (o link "Ainda não possui cadastro ?"). */
+.conta {
+  margin-top: 1.5em; /* Ajustado para rem/em para consistência */
+  font-size: 0.9em; /* Ajustado para em/rem */
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+/* Estiliza o link "Ainda não possui cadastro ?" quando o mouse passa por cima. */
+.conta:hover {
+  text-decoration: underline;
+}
+
+/* Estiliza a div com a classe "divisor" (que contém as linhas e o "OU"). */
+.divisor {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 0.8em; /* Ajustado para em/rem */
+}
+
+/* Estiliza as linhas horizontais <hr> dentro do .divisor. */
+.divisor hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid #555;
+}
+
+/* Estiliza o <span> (o texto "OU") dentro do .divisor. */
+.divisor span {
+  padding: 0 0.8em; /* Ajustado para em/rem */
+  font-size: 0.9em; /* Ajustado para em/rem */
+  font-family: sans-serif;
+}
+
+/* --- Estilos gerais para botões de login social --- */
+/* Estiliza todos os elementos com a classe "social-login-button". */
+.social-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.8em; /* Ajustado para em/rem */
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem; /* Ajustado para rem/em */
+  cursor: pointer;
+  margin-bottom: 0.5em; /* Ajustado para em/rem (era negativo) */
+}
+
+/* Efeito hover para os botões de login social. */
+.social-login-button:hover {
+  opacity: 0.85;
+}
+
+/* Estilo para os ícones do Boxicons <i> dentro dos botões sociais. */
+.social-login-button i {
+  font-size: 1.5rem; /* Ajustado para rem/em */
+  margin-right: 0.8em; /* Ajustado para em/rem */
+  line-height: 1;
+}
+
+/* --- Estilos específicos para cada botão --- */
+
+/* Botão Google */
+.google-button {
+  background-color: #333;
+  color: #4285f4;
+  border: 1px solid #666;
+}
+
+/* Efeito hover para o botão Google. */
+.google-button:hover {
+  background-color: #444;
+}
+
+/* Para o ícone do Google, se o padrão do Boxicons não for colorido: */
+.google-button .bxl-google {
+  color: #4285f4;
+}
+
+/* Botão GitHub */
+.github-button {
+  background-color: #333;
+  color: white;
+  border-color: #666;
+}
+
+/* Efeito hover para o botão GitHub. */
+.github-button:hover {
+  background-color: #444;
+}
